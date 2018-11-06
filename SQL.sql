@@ -1,10 +1,7 @@
-SELECT DISTINCT maker
-FROM product a
-LEFT JOIN pc b
-ON a.model = b.model
-WHERE type = 'pc'
-EXCEPT
-SELECT DISTINCT maker
-FROM product a
-RIGHT JOIN pc b
-ON a.model = b.model
+Задание № 13
+?
+Задание № 14
+
+SELECT DISTINCT a.model AS model, b.model AS model, b.speed, b.ram
+FROM pc a, pc b
+WHERE a.speed = b.speed AND a.ram = b.ram
