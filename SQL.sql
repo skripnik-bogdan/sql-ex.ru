@@ -10,6 +10,6 @@ WHERE a.speed = b.speed AND a.ram = b.ram AND a.model > b.model
 
 SELECT type, model
 FROM product
-WHERE model IN (SELECT model FROM laptop WHERE speed < ANY (SELECT speed FROM pc) )
+WHERE model IN (SELECT model FROM laptop WHERE speed < ANY (SELECT speed FROM pc))
 
 
