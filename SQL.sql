@@ -32,20 +32,27 @@ WHERE query like 'vodiy'
 
 2)
 
-SELECT query
+SELECT TOP 1 query
 FROM query_table
 WHERE region like 'Odesa'
 ORDER by data desc
-LIMIT 1
 
---------------
-3) SELECT COUNT(query) as foo
+3)
+
+SELECT COUNT(query) as foo
 FROM query_table
 GROUP by region
-4) SELECT query
+
+4)
+
+SELECT query
 FROM query_table a
 JOIN region_table b
-ON a.region = b.name AND is_sity = 1
-5) SELECT name r, population r, date q
+ON a.region = b.name AND b.is_sity = 1
+
+5)
+
+SELECT query q, date q, name r, population r
 FROM region_table r, query_table q
-WHERE date > '2016-08-05%'
+WHERE date = '2016-08-05'
+
