@@ -1,5 +1,9 @@
 Задание № 14
-?
+
+SELECT DISTINCT maker, type
+FROM product
+WHERE maker IN (SELECT maker FROM product GROUP by maker HAVING COUNT(model) > 1 AND COUNT(DISTINCT type) = 1)
+
 Задание № 16
 
 SELECT DISTINCT a.model, b.model, b.speed, b.ram
