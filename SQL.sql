@@ -24,7 +24,18 @@ JOIN laptop l
 ON l.speed < ALL (SELECT speed FROM pc)
 AND l.model = p.model
 
+Задание № 18
 
+SELECT maker, price
+FROM product a
+JOIN printer b
+ON a.model = b.model
+WHERE price = (SELECT MIN(price) FROM printer WHERE color = 'y')
+
+
+
+
+Задание № 19
 
 -------------------------
 Вопросы на собеседование
