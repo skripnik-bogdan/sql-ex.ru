@@ -121,6 +121,11 @@ WHERE price = (SELECT MIN(price) FROM printer WHERE color = 'y')
 
 Задание № 19
 
+SELECT Maker, AVG(screen) Avg_screen
+FROM product p, laptop l
+WHERE p.model = l.model
+GROUP by maker
+
 -------------------------
 Вопросы на собеседование
 -------------------------
